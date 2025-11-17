@@ -1,0 +1,23 @@
+INFO:     Will watch for changes in these directories: ['/home/workspace']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [152] using StatReload
+INFO:     Started server process [154]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     172.20.0.1:57740 - "GET /api/case-studies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57750 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     172.20.0.1:57740 - "GET /api/case-studies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:51976 - "GET /api/case-studies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:51976 - "GET /api/case-studies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57754 - "GET /api/case-studies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57754 - "GET /api/case-studies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:51982 - "GET /api/case-studies?category=domestic HTTP/1.1" 200 OK
+INFO:     172.20.0.1:51982 - "GET /api/case-studies?category=commercial HTTP/1.1" 200 OK
+INFO:     172.20.0.1:51982 - "GET /api/case-studies?category=education HTTP/1.1" 200 OK
+INFO:     172.20.0.1:51982 - "GET /api/case-studies?category=mixed HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48046 - "GET /api/case-studies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48046 - "GET /api/case-studies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:44572 - "GET /api/case-studies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:44572 - "GET /api/case-studies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:44572 - "GET /api/case-studies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:44572 - "GET /api/case-studies HTTP/1.1" 200 OK

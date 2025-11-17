@@ -11,8 +11,8 @@ Model name is converted to lowercase for the collection name:
 - BlogPost -> "blogs" collection
 """
 
-from pydantic import BaseModel, Field
-from typing import Optional
+from pydantic import BaseModel, Field, EmailStr
+from typing import Optional, Literal
 
 # Example schemas (replace with your own):
 
@@ -38,11 +38,26 @@ class Product(BaseModel):
     category: str = Field(..., description="Product category")
     in_stock: bool = Field(True, description="Whether product is in stock")
 
-# Add your own schemas here:
-# --------------------------------------------------
+# Teratherm-specific schemas
 
-# Note: The Flames database viewer will automatically:
-# 1. Read these schemas from GET /schema endpoint
-# 2. Use them for document validation when creating/editing
-# 3. Handle all database operations (CRUD) directly
-# 4. You don't need to create any database endpoints!
+class ContactMessage(BaseModel):
+    """
+    Incoming contact form submissions
+    Collection name: "contactmessage"
+    """
+    name: str = Field(..., min_length=2, max_length=120, description="Sender name")
+    email: EmailStr = Field(..., description="Sender email")
+    message: str = Field(..., min_length=5, max_length=4000, description="Message body")
+    source: Optional[Literal["website","landing","other"]] = Field("website", description="Source of the enquiry")
+
+class CaseStudy(BaseModel):
+    """
+    Case studies to showcase projects
+    Collection name: "casestudy"
+    """
+    title: str = Field(...)
+    category: Literal["domestic","commercial","education","mixed"]
+    location: Optional[str] = None
+    summary: Optional[str] = None
+    metrics: Optional[dict] = None
+    image_url: Optional[str] = None
